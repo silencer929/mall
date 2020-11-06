@@ -1,0 +1,143 @@
+@font-face{
+	font-family: "din";
+	font-style: normal;
+	font-weight: normal;
+	src: url("mall/public/fonts/din.eot");
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-style: normal;
+}
+body{
+	overflow-x: hidden;
+	background-color: #eee;
+	font-family: din;
+}
+
+.image{
+	display: block;
+	width: 100%;
+	z-index: 3;
+	border-radius: 5px;
+}
+.contain{
+	height: auto;
+	max-width: 1170px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.fluid-container{
+	display: block;
+	height: 400px;
+	width: 250px;
+	margin: 10px 0;
+	overflow: hidden;
+	border-radius: 5px;
+	background-color: #ccc;
+}
+.line{
+	background-color: darkgreen;
+	height: 3px;
+	width: auto;
+	margin: 10px 20px;
+}
+
+.product-img{
+	height: 200px;
+	width: 250px;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 5px;
+}
+.product-details{
+
+}
+.product-details span,button{
+	display: block;
+	text-align: center;
+	font-size: 17px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	color: darkgreen;
+}
+.fluid-bottom{
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+	font-family: din;
+	color: darkgreen;
+}
+.product-btn{
+	height: 25px;
+	width: 100px;
+	border: none;
+	outline: none;
+	font-size: 14px;
+	transition: ease-in 0.5s;
+	transform: translate(101%);
+}
+.fluid-container:hover .product-btn{
+	transform: translate(0);
+}
+.product-btn:hover{
+	outline: none;
+	color: gold;
+	background-color: #c55;
+	border: 1px solid orange;
+}
+/*_______________cart styling________________*/
+.cart-area{
+	position: absolute;
+	top:80px;
+	right: 0px;
+	height: auto;
+	width: 400px;
+	border: 1px solid orange;
+	background-color: #fff;
+	opacity: 1;
+	transition: ease-in 1s;
+	z-index: 1000;
+}
+.hide-cart{
+	opacity: 0;
+}
+.cart-item{
+	display: flex;
+	justify-content: space-around;
+	margin: 10px;
+	height:100px;
+	background-color: #cca;
+}
+.cart-img{
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+	overflow: hidden;
+}
+.cart-box{
+	display: block;
+}
+.cart-details span{
+	display: block;
+	font-size: 17px;
+	columns: gold;
+}
+.remove-btn button{
+	height: 25px;
+	width: 100px;
+	border-radius: 5px;
+}
+.amount{
+	font-size: 20px;
+	font-weight: bold;
+}
+.sub-btn:hover,.add-btn:hover{
+	background-color: red;
+	color:gold;
+	transform: scale(1.1);
+}
+/*_______________end cart styling________________*/
